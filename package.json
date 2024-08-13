@@ -1,0 +1,19 @@
+{
+  "name": "chatai",
+  "version": "1.0.0",
+  "description": "web chat gemini use neoxr api",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Anshor Falahi",
+  "license": "ISC",
+  "dependencies": {
+    "@neoxr/api": "^1.5.3",
+    "axios": "^1.7.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "marked": "^14.0.0",
+    "path": "^0.12.7"
+  }
+}
