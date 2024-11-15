@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
@@ -13,7 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route untuk meneruskan permintaan ke API
 app.get('/api/bard', async (req, res) => {
-    const { q, apikey } = req.query;
+    const { q } = req.query;
+    const apikey = process.env.API_KEY;
     try {
         const response = await axios.get(`https://api.neoxr.my.id/api/bard?q=${q}&apikey=${apikey}`);
         res.json(response.data);

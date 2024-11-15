@@ -1,4 +1,3 @@
-const apiKey = '';  // Ganti dengan API key yang sesuai
 const apiEndpoint = 'http://localhost:3000/api/bard';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             console.log(messageText);
     
-            const response = await axios.get(`${apiEndpoint}?q=${encodeURIComponent(message)}&apikey=${apiKey}`);
+            const response = await axios.get(`${apiEndpoint}?q=${encodeURIComponent(message)}`);
             const responseData = response.data;
             if (responseData.status) {
                 addMessage(responseData.data.message, 'bot');
